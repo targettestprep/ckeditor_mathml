@@ -8,8 +8,23 @@ CKEDITOR.editorConfig = function( config )
   // Define changes to default configuration here. For example:
   // config.language = 'fr';
   // config.uiColor = '#AADC6E';
+  config.toolbar = [
+    { name: 'clipboard', groups: [ 'clipboard', 'undo' ], items: [ 'Source', 'Cut', 'Copy', 'Paste', 'PasteText', 'Undo', 'Redo' ] },
+    { name: 'editing', groups: [ 'find', 'selection', 'spellchecker' ], items: [ 'Find', 'Replace', '-', 'SelectAll', '-', 'Scayt' ] },
+    { name: 'basicstyles', groups: [ 'basicstyles', 'cleanup' ], items: [ 'Bold', 'Italic', 'Underline', 'Strike', 'Subscript', 'Superscript' ] },
+    { name: 'paragraph', groups: [ 'list', 'blocks' ], items: [ 'NumberedList', 'BulletedList', 'Blockquote' ] },
+    { name: 'insert', items: [ 'Table', 'HorizontalRule', 'SpecialChar' ] },
+    { name: 'styles', items: [ 'Styles', 'Format' ] },
+    { name: 'tools', items: [ 'Maximize', 'ShowBlocks' ] },
+    { name: 'mathjax', items: [ 'Mathjax' ] }
+  ];
 
-  /* Filebrowser routes */
+  config.extraPlugins = 'mathjax';
+  config.mathJaxClass = 'math-tex-or-mml';
+  config.mathJaxLib   = 'http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+  config.extraAllowedContent = 'math mfenced merror menclose maction mmultiscripts mover mphantom mprescripts mspace mstyle msubsup mtable mtd mtr munder munderover none mtext semantics msub mrow msup mi mn mo sqrt mfrac';
+
+
   // The location of an external file browser, that should be launched when "Browse Server" button is pressed.
   config.filebrowserBrowseUrl = "/ckeditor/attachment_files";
 
