@@ -107,7 +107,7 @@
         },
 
         downcast: function( el ) {
-          el.children[ 0 ].replaceWith( replace_gt_and_lt(this.data.math) );
+          el.children[ 0 ].replaceWith( new CKEDITOR.htmlParser.text( replace_gt_and_lt(this.data.math) ) );
 
           // Remove style display:inline-block.
           var attrs = el.attributes;
@@ -456,3 +456,8 @@
  * @cfg {String} [mathJaxClass='math-tex-or-mml']
  * @member CKEDITOR.config
  */
+
+
+
+
+
