@@ -26,7 +26,7 @@ module Ckeditor
     def render_tag(name, content)
       options['id'] = sanitize_to_id(options['id'] || name)
 
-      render text_area_tag(name, content, options)
+      render text_area_tag(name, content.html_safe, options)
     end
 
     protected

@@ -1,4 +1,8 @@
-﻿/**
+﻿function replace_gt_and_lt(text){
+  return text.replace('>>', '>&gt;').replace('<<', '&lt;<');
+}
+
+/**
  * @license Copyright (c) 2003-2014, CKSource - Frederico Knabben. All rights reserved.
  * For licensing, see LICENSE.md or http://ckeditor.com/license
  */
@@ -66,13 +70,13 @@
               iframe.setAttribute( 'src', CKEDITOR.plugins.mathjax.fixSrc );
 
             this.frameWrapper = new CKEDITOR.plugins.mathjax.frameWrapper( iframe, editor );
-            this.frameWrapper.setValue( this.data.math );
+            this.frameWrapper.setValue( replace_gt_and_lt(this.data.math) );
           } );
         },
 
         data: function() {
           if ( this.frameWrapper )
-            this.frameWrapper.setValue( this.data.math );
+            this.frameWrapper.setValue( replace_gt_and_lt(this.data.math) );
         },
 
         upcast: function( el, data ) {
@@ -103,7 +107,7 @@
         },
 
         downcast: function( el ) {
-          el.children[ 0 ].replaceWith( new CKEDITOR.htmlParser.text( this.data.math ) );
+          el.children[ 0 ].replaceWith( replace_gt_and_lt(this.data.math) );
 
           // Remove style display:inline-block.
           var attrs = el.attributes;
@@ -349,6 +353,7 @@
 
         editor.fire( 'lockSnapshot' );
 
+        value = value;
         buffer.setHtml( value );
 
         // Set loading indicator.

@@ -35,13 +35,11 @@ CKEDITOR.dialog.add( 'mathjax', function( editor ) {
             },
 
             setup: function( widget ) {
-              // Remove \( and \).
-              this.setValue( widget.data.math );
+              this.setValue( replace_gt_and_lt(widget.data.math) );
             },
 
             commit: function( widget ) {
-              // Add \( and \) to make TeX be parsed by MathJax by default.
-              widget.setData( 'math', this.getValue() );
+              widget.setData( 'math', replace_gt_and_lt(this.getValue()) );
             }
           },
           {
@@ -68,7 +66,7 @@ CKEDITOR.dialog.add( 'mathjax', function( editor ) {
             },
 
             setup: function( widget ) {
-              preview.setValue( widget.data.math );
+              preview.setValue( replace_gt_and_lt(widget.data.math) );
             }
           }
         ]
