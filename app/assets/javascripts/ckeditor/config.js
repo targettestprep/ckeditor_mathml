@@ -19,6 +19,7 @@ CKEDITOR.editorConfig = function( config )
     { name: 'mathjax', items: [ 'Mathjax' ] }
   ];
 
+  config.specialChars = config.specialChars.concat(['&pi;', '&Pi;']);
   config.extraPlugins = 'mathjax';
   config.mathJaxClass = 'math-tex-or-mml';
   config.mathJaxLib   = 'http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
