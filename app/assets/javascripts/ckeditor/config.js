@@ -19,6 +19,9 @@ CKEDITOR.editorConfig = function( config )
     { name: 'mathjax', items: [ 'Mathjax' ] }
   ];
 
+  // stop the editor from inserting a non-breaking space in empty paragraphs
+  config.fillEmptyBlocks = false;
+
   config.specialChars = config.specialChars.concat(['&pi;', '&Pi;']);
   config.extraPlugins = 'mathjax';
   config.mathJaxClass = 'math-tex-or-mml';
