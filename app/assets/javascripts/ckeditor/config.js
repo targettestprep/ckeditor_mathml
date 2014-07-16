@@ -21,6 +21,7 @@ CKEDITOR.editorConfig = function( config )
 
   // stop the editor from inserting a non-breaking space in empty paragraphs
   config.fillEmptyBlocks = false;
+  config.ignoreEmptyParagraph = false;
 
   config.specialChars = config.specialChars.concat(['&pi;', '&Pi;']);
   config.extraPlugins = 'mathjax';
