@@ -22,7 +22,7 @@ CKEDITOR.editorConfig = function( config )
   config.specialChars = config.specialChars.concat(['&pi;', '&Pi;']);
   config.extraPlugins = 'mathjax';
   config.mathJaxClass = 'math-tex-or-mml';
-  config.mathJaxLib   = 'http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+  config.mathJaxLib   = window.location.protocol + '//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
   config.extraAllowedContent = 'table tbody tr td math mfenced merror menclose maction mmultiscripts mover mphantom mprescripts mspace mstyle msubsup mtable mtd mtr munder mun semantics mrow mfrac mn mo mtext msub mi malignmark msqrt none msup mroot maligngroup[*]{*}';
 
   // The location of an external file browser, that should be launched when "Browse Server" button is pressed.

@@ -15,7 +15,7 @@
 
 ( function() {
 
-  var cdn = 'http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+  var cdn = window.location.protocol + '//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
 
   CKEDITOR.plugins.add( 'mathjax', {
     lang: 'ar,ca,cs,cy,de,el,en,en-gb,es,fa,fi,fr,gl,hr,hu,ja,km,nb,nl,no,pl,pt,pt-br,ro,ru,sl,sv,uk,zh,zh-cn', // %REMOVE_LINE_CORE%
@@ -456,8 +456,3 @@
  * @cfg {String} [mathJaxClass='math-tex-or-mml']
  * @member CKEDITOR.config
  */
-
-
-
-
-
