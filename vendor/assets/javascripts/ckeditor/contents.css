@@ -125,9 +125,27 @@ figure figcaption
 p.indented1 {
   margin-left: 30px;
 }
+
 p.indented2 {
   margin-left: 60px;
 }
+
 p.indented3 {
   margin-left: 90px;
+}
+
+.text-left{
+  text-align: left;
+}
+
+.force-center{
+  text-align: center !important;
+}
+
+.text-right{
+  text-align: right;
+}
+
+.text-justify {
+  text-align: justify;
 }
