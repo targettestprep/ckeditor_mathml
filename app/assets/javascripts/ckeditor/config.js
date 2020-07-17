@@ -3,8 +3,7 @@ Copyright (c) 2003-2011, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.html or http://ckeditor.com/license
 */
 
-CKEDITOR.editorConfig = function( config )
-{
+CKEDITOR.editorConfig = function( config ) {
   // Define changes to default configuration here. For example:
   // config.language = 'fr';
   // config.uiColor = '#AADC6E';
@@ -52,7 +51,7 @@ CKEDITOR.editorConfig = function( config )
   config.autoGrow_onStartup = true;
   config.autoGrow_minHeight = 0;
   config.autoGrow_bottomSpace = 0;
-
+  config.height = 62;
 
   // Rails CSRF token
   config.filebrowserParams = function(){
