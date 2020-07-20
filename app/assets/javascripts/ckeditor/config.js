@@ -3,8 +3,7 @@ Copyright (c) 2003-2011, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.html or http://ckeditor.com/license
 */
 
-CKEDITOR.editorConfig = function( config )
-{
+CKEDITOR.editorConfig = function( config ) {
   // Define changes to default configuration here. For example:
   // config.language = 'fr';
   // config.uiColor = '#AADC6E';
@@ -20,7 +19,7 @@ CKEDITOR.editorConfig = function( config )
   ];
 
   config.specialChars = config.specialChars.concat(['&pi;', '&Pi;']);
-  config.extraPlugins = 'mathjax';
+  config.extraPlugins = 'mathjax,autogrow';
   config.mathJaxClass = 'math-tex-or-mml';
   config.mathJaxLib   = window.location.protocol + '//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
   config.extraAllowedContent = 'a table tbody tr td math mfenced merror menclose maction mmultiscripts mover mphantom mprescripts mspace mstyle msubsup mtable mtd mtr munder mun semantics mrow mfrac mn mo mtext msub mi malignmark msqrt none msup mroot maligngroup[*]{*}';
@@ -47,6 +46,12 @@ CKEDITOR.editorConfig = function( config )
 
   // The location of a script that handles file uploads.
   config.filebrowserUploadUrl = "/ckeditor/attachment_files";
+  
+  // Autogrow config entries
+  config.autoGrow_onStartup = true;
+  config.autoGrow_minHeight = 0;
+  config.autoGrow_bottomSpace = 0;
+  config.height = 62;
 
   // Rails CSRF token
   config.filebrowserParams = function(){
