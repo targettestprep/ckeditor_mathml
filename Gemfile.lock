@@ -90,7 +90,7 @@ GEM
       mongoid (>= 3.0, < 5.0)
     mongoid-paperclip (0.0.9)
       paperclip (>= 2.3.6)
-    moped (1.5.2)
+    moped (1.5.3)
     multi_json (1.9.2)
     mynyml-redgreen (0.7.1)
       term-ansicolor (>= 1.0.4)
