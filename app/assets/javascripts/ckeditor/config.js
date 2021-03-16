@@ -15,11 +15,12 @@ CKEDITOR.editorConfig = function( config ) {
     { name: 'insert', items: [ 'Table', 'HorizontalRule', 'SpecialChar' ] },
     { name: 'styles', items: [ 'Styles', 'Format' ] },
     { name: 'tools', items: [ 'Maximize', 'ShowBlocks' ] },
-    { name: 'mathjax', items: [ 'Mathjax' ] }
+    { name: 'mathjax', items: [ 'Mathjax' ] },
+    { name: 'links', items: [ 'Link' ] }
   ];
 
   config.specialChars = config.specialChars.concat(['&pi;', '&Pi;']);
-  config.extraPlugins = 'mathjax,autogrow';
+  config.extraPlugins = 'mathjax,autogrow,link';
   config.mathJaxClass = 'math-tex-or-mml';
   config.mathJaxLib   = window.location.protocol + '//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
   config.extraAllowedContent = 'a table tbody tr td math mfenced merror menclose maction mmultiscripts mover mphantom mprescripts mspace mstyle msubsup mtable mtd mtr munder mun semantics mrow mfrac mn mo mtext msub mi malignmark msqrt none msup mroot maligngroup[*]{*}';
