@@ -46,6 +46,7 @@ var CKBUILDER_CONFIG = {
 		'contextmenu' : 1,
 		'dialogadvtab' : 1,
 		'div' : 1,
+		'divarea' : 1,
 		'elementspath' : 1,
 		'enterkey' : 1,
 		'entities' : 1,
@@ -92,8 +93,7 @@ var CKBUILDER_CONFIG = {
 		'templates' : 1,
 		'toolbar' : 1,
 		'undo' : 1,
-		'wsc' : 1,
-		'wysiwygarea' : 1
+		'wsc' : 1
 	},
 	languages : {
 		'af' : 1,
