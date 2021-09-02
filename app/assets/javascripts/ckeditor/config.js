@@ -16,7 +16,8 @@ CKEDITOR.editorConfig = function( config ) {
     { name: 'styles', items: [ 'Styles', 'Format' ] },
     { name: 'tools', items: [ 'Maximize', 'ShowBlocks' ] },
     { name: 'mathjax', items: [ 'Mathjax' ] },
-    { name: 'links', items: [ 'Link' ] }
+    { name: 'links', items: [ 'Link' ] },
+    { name: 'insert', items: [ 'Image'] }
   ];
 
   config.specialChars = config.specialChars.concat(['&pi;', '&Pi;']);
