@@ -1,6 +1,8 @@
+# frozen_string_literal: true
+
 module Ckeditor
   module Version
-    GEM = "4.0.25".freeze
-    EDITOR = "4.3.4".freeze
+    GEM = '5.1.1'
+    EDITOR = '4.11.3'
   end
 end

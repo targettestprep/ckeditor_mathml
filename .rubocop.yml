@@ -1,0 +1,38 @@
+require:
+  - rubocop-rails
+
+AllCops:
+  NewCops: disable
+  SuggestExtensions: false
+  TargetRubyVersion: 2.5.1
+  TargetRailsVersion: 5.2.4.6
+  Exclude:
+    - '**/vendor/**/*'
+    - '**/db/schema.rb'
+    - '**/db/migrate'
+    - '**/app/views/**/*'
+
+
+##################### Style ##################################
+
+Style/Documentation:
+  Enabled: false
+
+Style/ClassAndModuleChildren:
+  Enabled: false
+
+##################### Metrics ##################################
+
+Layout/LineLength:
+  Max: 110
+
+Metrics/ClassLength:
+  Max: 200
+
+Metrics/ModuleLength:
+  Max: 200
+
+##################### Rails ##################################
+
+Rails:
+  Enabled: true
