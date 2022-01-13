@@ -9,7 +9,7 @@ CKEDITOR.editorConfig = function( config ) {
   // config.uiColor = '#AADC6E';
   config.toolbar = [
     { name: 'clipboard', groups: [ 'clipboard', 'undo' ], items: [ 'Source', 'Cut', 'Copy', 'Paste', 'PasteText', 'Undo', 'Redo' ] },
-    { name: 'editing', groups: [ 'find', 'selection', 'spellchecker' ], items: [ 'Find', 'Replace', '-', 'SelectAll', '-', 'Scayt' ] },
+    { name: 'editing', groups: [ 'find', 'selection', 'spellchecker' ], items: [ 'Find', 'Replace', '-', 'SelectAll', '-' ] },
     { name: 'basicstyles', groups: [ 'basicstyles', 'cleanup' ], items: [ 'Bold', 'Italic', 'Underline', 'Strike', 'Subscript', 'Superscript' ] },
     { name: 'paragraph', groups: [ 'list', 'blocks', 'align' ], items: [ 'NumberedList', 'BulletedList', 'Blockquote', 'Indent', 'Outdent', 'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock' ] },
     { name: 'insert', items: [ 'Table', 'HorizontalRule', 'SpecialChar' ] },
@@ -48,7 +48,10 @@ CKEDITOR.editorConfig = function( config ) {
 
   // The location of a script that handles file uploads.
   config.filebrowserUploadUrl = "/ckeditor/attachment_files";
-  
+
+  // Disable Spell Check As You Type (SCAYT)
+  config.scayt_autoStartup = false;
+
   // Autogrow config entries
   config.autoGrow_onStartup = true;
   config.autoGrow_minHeight = 0;
