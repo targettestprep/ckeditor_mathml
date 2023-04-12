@@ -87,7 +87,7 @@ GEM
       rake
     mini_magick (4.11.0)
     mini_mime (1.1.2)
-    mini_portile2 (2.6.1)
+    mini_portile2 (2.8.1)
     mongoid (3.1.7)
       activemodel (~> 3.2)
       moped (~> 1.4)
@@ -103,8 +103,8 @@ GEM
     multi_json (1.15.0)
     mynyml-redgreen (0.7.1)
       term-ansicolor (>= 1.0.4)
-    nokogiri (1.12.5)
-      mini_portile2 (~> 2.6.1)
+    nokogiri (1.14.3)
+      mini_portile2 (~> 2.8.0)
       racc (~> 1.4)
     origin (1.1.0)
     orm_adapter (0.5.0)
@@ -115,7 +115,7 @@ GEM
       mime-types
     polyglot (0.3.5)
     public_suffix (4.0.6)
-    racc (1.6.0)
+    racc (1.6.2)
     rack (1.4.7)
     rack-cache (1.13.0)
       rack (>= 0.4)
