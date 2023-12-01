@@ -6,8 +6,8 @@ window.CKEDITOR_ASSETS_MAPPING = {
       "<%= asset %>": "<%= asset_path(asset) %>",
     <% end %>
   <% else %>
-    <% Rails.application.assets_manifest.assets.select { |logical_path, asset_path| logical_path =~ /ckeditor/ && logical_path != 'ckeditor/override.js' }.each do |logical_path, asset_path| %>
-      "<%= logical_path %>": "<%= asset_path %>",
+    <% Rails.application.assets_manifest.assets.keys.select { |logical_path| logical_path =~ /ckeditor/ && logical_path != 'ckeditor/override.js' }.each do |asset| %>
+      "<%= asset %>": "<%= asset_path(asset) %>",
     <% end %>
   <% end %>
 }
