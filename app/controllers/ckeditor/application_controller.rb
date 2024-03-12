@@ -1,10 +1,9 @@
-class Ckeditor::ApplicationController < ActionController::Base
-  respond_to :html, :json
+class Ckeditor::ApplicationController < ApplicationController
   layout 'ckeditor/application'
 
-  before_action :find_asset, :only => [:destroy]
-  before_action :ckeditor_authorize!
-  before_action :authorize_resource
+  before_filter :find_asset, :only => [:destroy]
+  before_filter :ckeditor_authorize!
+  before_filter :authorize_resource
 
   protected
 
@@ -15,13 +14,21 @@ class Ckeditor::ApplicationController < ActionController::Base
       callback = ckeditor_before_create_asset(asset)
 
       if callback && asset.save
-        body = params[:CKEditor].blank? ? asset.to_json(:only=>[:id, :type]) : %Q"<script type='text/javascript'>
-          window.parent.CKEDITOR.tools.callFunction(#{params[:CKEditorFuncNum]}, '#{config.relative_url_root}#{Ckeditor::Utils.escape_single_quotes(asset.url_content)}');
-        </script>"
-
-        render :text => body
+        if params[:CKEditor].blank?
+          render :json => asset.to_json(:only=>[:id, :type])
+        else
+          render :text => %Q"<script type='text/javascript'>
+              window.parent.CKEDITOR.tools.callFunction(#{params[:CKEditorFuncNum]}, '#{config.relative_url_root}#{Ckeditor::Utils.escape_single_quotes(asset.url_content)}');
+            </script>"
+        end
       else
-        render :nothing => true
+        if params[:CKEditor].blank?
+          render :nothing => true, :format => :json
+        else
+          render :text => %Q"<script type='text/javascript'>
+              window.parent.CKEDITOR.tools.callFunction(#{params[:CKEditorFuncNum]}, null, '#{Ckeditor::Utils.escape_single_quotes(asset.errors.full_messages.first)}');
+            </script>"
+        end
       end
     end
 end
